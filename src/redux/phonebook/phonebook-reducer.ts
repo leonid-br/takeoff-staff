@@ -12,13 +12,6 @@ import {
     deleteContactError,
 } from './phonebook-actions';
 
-// const items = createReducer([], {
-//     [getContactsSuccess]: (_, { payload }) => payload,
-//     [addContactSuccess]: (state, { payload }) => [...state, payload],
-//     [deleteContactSuccess]: (state, { payload }) => [
-//         ...state.filter(({ id }) => id !== payload),
-//     ],
-// });
 const items = createReducer([], builder => {
     builder
         .addCase(getContactsSuccess, (_, { payload }) => payload)
