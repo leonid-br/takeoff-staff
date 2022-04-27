@@ -1,5 +1,4 @@
 import { createAction } from '@reduxjs/toolkit';
-import { stringify } from 'querystring';
 
 export const getContactsRequest = createAction('phonebook/getContactsRequest');
 export const getContactsSuccess = createAction('phonebook/getContactsSuccess');
