@@ -1,0 +1,28 @@
+.item {
+    font-weight: 600;
+    position: relative;
+}
+
+.item:not(:last-child) {
+    margin-bottom: 5px;
+}
+
+.button {
+    position: absolute;
+    right: 0;
+
+    font-size: 12px;
+    padding: 0 3px;
+    border-radius: 32px;
+    border-color: #babecc;
+    color: #babecc;
+}
+
+.button:hover {
+    box-shadow: -2px -2px 5px #fff, 2px 2px 5px #ae1100;
+    color: #ae1100;
+}
+
+.number {
+    margin-left: 3px;
+}

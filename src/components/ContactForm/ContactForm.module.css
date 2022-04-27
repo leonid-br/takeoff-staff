@@ -1,0 +1,58 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    border: solid 4px skyblue;
+    border-radius: 10px;
+
+    padding: 10px;
+    margin-bottom: 10px;
+
+    background-color: skyblue;
+}
+
+.lable {
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: gray;
+}
+
+.input {
+    border: 0;
+    outline: 0;
+    font-size: 14px;
+    border-radius: 32px;
+    padding: 8px;
+    background-color: #ebecf0;
+    text-shadow: 1px 1px 0 #fff;
+
+    box-shadow: inset 2px 2px 5px #babecc, inset -5px -5px 10px #fff;
+    width: 100%;
+    box-sizing: border-box;
+    transition: all 0.2s ease-in-out;
+    appearance: none;
+}
+.input:focus {
+    box-shadow: inset 1px 1px 2px #ae1100, inset -1px -1px 2px #fff;
+}
+
+.button {
+    justify-content: center;
+    color: #babecc;
+    text-shadow: 1px 1px 1px #fff;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    font-weight: 600;
+
+    border: 0;
+    outline: 0;
+    font-size: 16px;
+    border-radius: 32px;
+    padding: 8px;
+    background-color: #ebecf0;
+}
+.button:hover {
+    box-shadow: -2px -2px 5px #fff, 2px 2px 5px #babecc;
+    color: #ae1100;
+}
