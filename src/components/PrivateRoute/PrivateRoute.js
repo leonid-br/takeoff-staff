@@ -1,19 +1,18 @@
 import { useSelector } from 'react-redux';
-import { Route, Redirect } from 'react-router-dom';
-import { isLoggedInGet } from 'redux/selectors';
-import { useHistory } from 'react-router';
+import { Route, Navigate, useNavigate } from 'react-router-dom';
+import { isLoggedInGet } from '../../redux/selectors';
 
 export default function PrivateRaute({ children, ...routeProps }) {
     const isLoggedIn = useSelector(isLoggedInGet);
-    const history = useHistory();
+    const navigate = useNavigate();
 
     if (isLoggedIn) {
-        history.push('/contacts');
+        navigate('/contacts');
     }
 
     return (
         <Route {...routeProps}>
-            {isLoggedIn ? children : <Redirect to="/" />}
+            {isLoggedIn ? children : <Navigate replace to="/" />}
         </Route>
     );
 }

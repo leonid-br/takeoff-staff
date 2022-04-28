@@ -1,6 +1,6 @@
 import { useSelector } from 'react-redux';
-import { Route, Redirect } from 'react-router-dom';
-import { isLoggedInGet } from 'redux/selectors';
+import { Route, Navigate } from 'react-router-dom';
+import { isLoggedInGet } from '../../redux/selectors';
 
 export default function PublicRoute({
     children,
@@ -12,7 +12,7 @@ export default function PublicRoute({
 
     return (
         <Route {...routeProps}>
-            {shouldRedirect ? <Redirect to="/contacts" /> : children}
+            {shouldRedirect ? <Navigate replace to="/contacts" /> : children}
         </Route>
     );
 }

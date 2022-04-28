@@ -8,8 +8,10 @@ interface IToken {
 }
 
 interface ICredentials {
-    name: string;
-    password: string;
+    user: {
+        name: string;
+        password: string;
+    };
     token: string;
 }
 

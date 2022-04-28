@@ -11,9 +11,9 @@ import PrivateRoute from './PrivateRoute/PrivateRoute';
 import PublicRoute from './PublicRoute/PublicRoute';
 import { useSelector, useDispatch } from 'react-redux';
 import { useEffect } from 'react';
-import { getContacts } from 'redux/phonebook/phonebook-operation';
-import { getItems, isLoggedInGet, getName } from 'redux/selectors';
-import { fetchCurrentUser } from 'redux/auth/auth-operations';
+import { getContacts } from '../redux/phonebook/phonebook-operation';
+import { getItems, isLoggedInGet, getName } from '../redux/selectors';
+import { fetchCurrentUser } from '../redux/auth/auth-operations';
 import { Routes, useNavigate } from 'react-router-dom';
 
 const App = () => {
@@ -25,8 +25,8 @@ const App = () => {
 
     navigate('/');
     useEffect(() => {
-        dispatch(fetchCurrentUser());
-        dispatch(getContacts());
+        // dispatch(fetchCurrentUser());
+        // dispatch(getContacts());
     }, [dispatch, isLoggedIn]);
 
     return (
@@ -45,7 +45,7 @@ const App = () => {
                         <LoginForm />
                     </PublicRoute>
 
-                    <PrivateRoute path="/contacts" />
+                    {/* <PrivateRoute path="/contacts" /> */}
                 </Routes>
             ) : (
                 <>

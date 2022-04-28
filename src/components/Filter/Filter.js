@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import { useDispatch, useSelector } from 'react-redux';
-import { findContact } from 'redux/phonebook/phonebook-actions';
+import { findContact } from '../../redux/phonebook/phonebook-actions';
 import style from './Filter.module.css';
 
 const Filter = () => {

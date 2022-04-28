@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import style from './Heading.module.css';
-import { logout } from 'redux/auth/auth-operations';
+import { logout } from '../../redux/auth/auth-operations';
 import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 

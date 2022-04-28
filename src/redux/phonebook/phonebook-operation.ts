@@ -40,5 +40,5 @@ export const deleteContactById = id => dispatch => {
     axios
         .delete(`/contacts/${id}`)
         .then(() => dispatch(deleteContactSuccess(id)))
-        .catch(error => dispatch(deleteContactError(error.message)));
+        .catch(error => dispatch(deleteContactError(error)));
 };

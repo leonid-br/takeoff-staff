@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
-import { deleteContactById } from 'redux/phonebook/phonebook-operation';
+import { deleteContactById } from '../../redux/phonebook/phonebook-operation';
 import style from './ContactItem.module.css';
 
 const ContactItem = ({ id, name, number }) => {

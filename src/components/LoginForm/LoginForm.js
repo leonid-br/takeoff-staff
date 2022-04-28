@@ -3,10 +3,10 @@ import { useDispatch } from 'react-redux';
 // import { Link } from 'react-router-dom';
 import { login } from '../../redux/auth/auth-operations';
 import style from './LoginForm.module.css';
-import { useHistory } from 'react-router';
+import { useNavigate } from 'react-router-dom';
 
 const LoginForm = () => {
-    const history = useHistory();
+    const navigate = useNavigate();
     const dispatch = useDispatch();
 
     const initialState = { email: null, password: null };
@@ -23,7 +23,7 @@ const LoginForm = () => {
         e.preventDefault();
         try {
             dispatch(login(userData));
-            history.push('/contacts');
+            navigate('/contacts');
             setUserData(initialState);
         } catch (error) {}
     };

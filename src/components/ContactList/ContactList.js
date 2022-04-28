@@ -1,10 +1,10 @@
 import PropTypes from 'prop-types';
 import { useSelector, useDispatch } from 'react-redux';
 import { useEffect } from 'react';
-import ContactItem from 'components/ContactItem/ContactItem';
+import ContactItem from '../ContactItem/ContactItem';
 import style from './ContactList.module.css';
-import { getAllContacts, isLoggedInGet } from 'redux/selectors';
-import { getContacts } from 'redux/phonebook/phonebook-operation';
+import { getAllContacts, isLoggedInGet } from '../../redux/selectors';
+import { getContacts } from '../../redux/phonebook/phonebook-operation';
 
 const ContactList = () => {
     const dispatch = useDispatch();
